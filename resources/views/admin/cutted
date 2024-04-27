@@ -1,0 +1,26 @@
+<form action="{{ url('/uploadfood') }}" class="form" method="post" enctype="multipart/form-data">
+        @csrf
+        <div>
+            <label for="">Title</label>
+            <input type="text" class="form-group" value="{{ $data->title }}" style="color:blue" name="title" required placeholder="Write A title">
+        </div>
+
+        <div>
+            <label for="">Price</label>
+            <input type="text" class="form-group" value="{{ $data->price }}" style="color:blue" name="price" required placeholder="Write A Price">
+        </div>
+
+        <div>
+            <label for="">Image</label>
+            <input type="file" class="form-group" value="{{ $data->image }}" style="color:blue" name="image" required>
+        </div>
+
+        <div>
+            <label for="">Description</label>
+            <input type="text" class="form-group" value="{{ $data->description }}" style="color:blue" name="description" required placeholder="Write A Description">
+        </div>
+
+        <div>
+            <input type="submit" class="form-group btn btn-dark" value="Update">
+        </div>
+    </form>
